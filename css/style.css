@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #797979;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.naslovSekcije {
+  text-align: center;
+  text-transform: uppercase;
+  color: #374249;
+  margin-bottom: 3rem;
+}
+
+header {
+  background-color: #374249;
+  width: 100%;
+  height: auto;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+header nav ul li {
+  text-align: center;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 2rem;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header nav ul li:last-child {
+  background-color: #f38181;
+  width: 8rem;
+  text-align: center;
+}
+
+main .section-hero {
+  background-image: url("../slike/intro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 50rem;
+  position: relative;
+}
+main .section-hero .hero-text {
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 58, 82, 0.6);
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .section-hero .hero-text h1 {
+  font-size: 5rem;
+}
+main .section-button {
+  padding: 3rem;
+}
+main .section-button .flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .section-button .flex .flex-item {
+  display: flex;
+  gap: 3rem;
+}
+main .section-button .flex .flex-item a {
+  text-decoration: none;
+  color: #797979;
+  border: 1px solid #797979;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem 1.6rem;
+  display: inline-block;
+  transition: background-color 0.4s;
+}
+main .section-button .flex .flex-item a:hover {
+  background-color: #cfd1d3;
+  color: white;
+}
+main .section-opacity {
+  background-color: #f3f7f9;
+  padding: 3rem;
+}
+main .section-opacity .grid {
+  width: 60%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+main .section-opacity .grid .flex-item {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+main .section-opacity .grid .flex-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+main .section-opacity .grid .flex-item img {
+  width: 18rem;
+  border-radius: 50%;
+}
+main .section-opacity .grid .flex-item .item-text {
+  opacity: 0;
+}
+main .section-opacity .grid .flex-item .item-text p {
+  color: red;
+}
+main .section-opacity .grid .flex-item .item-text:hover {
+  opacity: 1;
+}
+main .section-table {
+  padding: 3rem;
+}
+main .section-table .table-text {
+  text-align: center;
+}
+main .section-table .table-text p {
+  margin-bottom: 3rem;
+}
+main .section-table table {
+  color: #797979;
+  border-collapse: collapse;
+  margin-inline: auto;
+}
+main .section-table table th,
+main .section-table table td {
+  border: 1px solid #797979;
+  padding: 1rem 4rem;
+}
+main .section-table table .crvena {
+  background-color: #f38181;
+  color: white;
+}
+main .section-table table .plava {
+  background-color: #374249;
+  color: white;
+}
+main .section-table table thead tr th:first-child {
+  border: none;
+}
+main .section-table table thead tr th:nth-child(2) {
+  border: none;
+}
+main .section-contact {
+  padding: 3rem;
+  background-color: #f3f7f9;
+}
+main .section-contact .flex {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+main .section-contact .flex iframe {
+  width: 25rem;
+  height: 25rem;
+}
+main .section-contact .flex form {
+  padding: 2rem;
+  background-color: #f38181;
+  width: 80%;
+}
+main .section-contact .flex form .box {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+main .section-contact .flex form .box input,
+main .section-contact .flex form .box textarea,
+main .section-contact .flex form .box select {
+  width: 100%;
+  margin-top: 1.4rem;
+}
+main .section-contact .flex form .box input,
+main .section-contact .flex form .box textarea,
+main .section-contact .flex form .box select {
+  padding: 0.8rem;
+}
+main .section-contact .flex form .box select {
+  width: 30%;
+}
+main .section-contact .flex form .box textarea {
+  height: 10rem;
+  resize: none;
+}
+
+footer {
+  width: 100%;
+  background-color: #374249;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+footer span {
+  color: #f38181;
+}
+
+/*# sourceMappingURL=style.css.map */

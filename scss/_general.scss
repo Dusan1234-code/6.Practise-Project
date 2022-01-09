@@ -1,0 +1,29 @@
+@import "vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $colorFont;
+  font-size: 1.6rem;
+  font-family: $font;
+}
+
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.naslovSekcije {
+  text-align: center;
+  text-transform: uppercase;
+  color: $tamnoPlava;
+  margin-bottom: 3rem;
+}

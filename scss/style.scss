@@ -1,0 +1,237 @@
+@import "general.scss";
+@import "mixin.scss";
+@import "vars.scss";
+
+// **************************
+// ***** HEADER ***********
+// **************************
+header {
+  background-color: $tamnoPlava;
+  width: 100%;
+  height: auto;
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+
+      li {
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: white;
+          display: inline-block;
+          padding: 2rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:last-child {
+          background-color: $crvena;
+          width: 8rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// **************************
+// ***** MAIN ***********
+// **************************
+main {
+  // **************************
+  // ***** SECTION HERO ***********
+  // **************************
+  .section-hero {
+    background-image: url("../slike/intro.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 50rem;
+    position: relative;
+    .hero-text {
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 58, 82, 0.6);
+      position: absolute;
+      width: 100%;
+      padding: 1rem;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%);
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  // **************************
+  // ***** SECTION BUTTON ***********
+  // **************************
+  .section-button {
+    padding: 3rem;
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .flex-item {
+        display: flex;
+        gap: 3rem;
+        a {
+          text-decoration: none;
+          color: $colorFont;
+          border: 1px solid $colorFont;
+          text-align: center;
+          border-radius: 20px;
+          padding: 1rem 1.6rem;
+          display: inline-block;
+          transition: background-color 0.4s;
+          &:hover {
+            background-color: $tamnoSiva;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // **************************
+  // ***** SECTION OPACITY ***********
+  // **************************
+  .section-opacity {
+    background-color: $svetloSiva;
+    padding: 3rem;
+    .grid {
+      width: 60%;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      .flex-item {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        &:nth-child(2) {
+          flex-direction: row-reverse;
+        }
+        img {
+          width: 18rem;
+          border-radius: 50%;
+        }
+        .item-text {
+          opacity: 0;
+          p {
+            color: red;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // **************************
+  // ***** SECTION TABLES ***********
+  // **************************
+  .section-table {
+    padding: 3rem;
+    .table-text {
+      text-align: center;
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+    table {
+      color: $colorFont;
+      border-collapse: collapse;
+      margin-inline: auto;
+      th,
+      td {
+        border: 1px solid $colorFont;
+        padding: 1rem 4rem;
+      }
+      .crvena {
+        background-color: $crvena;
+        color: white;
+      }
+      .plava {
+        background-color: $tamnoPlava;
+        color: white;
+      }
+      thead {
+        tr {
+          th:first-child {
+            border: none;
+          }
+          th:nth-child(2) {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  // **************************
+  // ***** SECTION CONTACT ***********
+  // **************************
+  .section-contact {
+    padding: 3rem;
+    background-color: $svetloSiva;
+    .flex {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+
+      iframe {
+        width: 25rem;
+        height: 25rem;
+      }
+      form {
+        padding: 2rem;
+        background-color: $crvena;
+        width: 80%;
+        .box {
+          display: flex;
+          align-items: center;
+          gap: 4rem;
+          input,
+          textarea,
+          select {
+            width: 100%;
+            margin-top: 1.4rem;
+          }
+          input,
+          textarea,
+          select {
+            padding: 0.8rem;
+          }
+          select {
+            width: 30%;
+          }
+          textarea {
+            height: 10rem;
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// **************************
+// ***** FOOTER ***********
+// **************************
+
+footer {
+  width: 100%;
+  background-color: $tamnoPlava;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  span {
+    color: $crvena;
+  }
+}
