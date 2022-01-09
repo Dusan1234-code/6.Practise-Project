@@ -15,7 +15,11 @@ header {
       align-items: center;
       justify-content: flex-end;
       list-style: none;
-
+      @include mobile {
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: 1fr;
+      }
       li {
         text-align: center;
         a {
@@ -29,8 +33,14 @@ header {
         }
         &:last-child {
           background-color: $crvena;
-          width: 8rem;
           text-align: center;
+          @include mobile {
+            grid-row: 1;
+            text-align: left;
+          }
+          img {
+            height: 3rem;
+          }
         }
       }
     }
@@ -51,6 +61,10 @@ main {
     background-size: cover;
     height: 50rem;
     position: relative;
+    @include mobile {
+      background-image: none;
+      height: 11.8rem;
+    }
     .hero-text {
       color: white;
       text-align: center;
@@ -76,6 +90,9 @@ main {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      @include mobile {
+        justify-content: center;
+      }
       .flex-item {
         display: flex;
         gap: 3rem;
@@ -88,6 +105,9 @@ main {
           padding: 1rem 1.6rem;
           display: inline-block;
           transition: background-color 0.4s;
+          @include mobile {
+            white-space: nowrap;
+          }
           &:hover {
             background-color: $tamnoSiva;
             color: white;
@@ -109,12 +129,23 @@ main {
       display: grid;
       grid-template-columns: 1fr;
       align-items: center;
+      @include mobile {
+        gap: 5rem;
+        justify-content: center;
+      }
       .flex-item {
         display: flex;
         gap: 5rem;
         align-items: center;
+        @include mobile {
+          flex-direction: column;
+          gap: 2rem;
+        }
         &:nth-child(2) {
           flex-direction: row-reverse;
+          @include mobile {
+            flex-direction: column;
+          }
         }
         img {
           width: 18rem;
@@ -122,8 +153,24 @@ main {
         }
         .item-text {
           opacity: 0;
+          text-align: center;
+
+          h3 {
+            color: $tamnoPlava;
+            font-size: 3rem;
+            white-space: nowrap;
+            @include tablet {
+              font-size: 2rem;
+            }
+          }
+          @include mobile {
+            opacity: 1;
+          }
           p {
             color: red;
+            @include tablet {
+              font-size: 1.3rem;
+            }
           }
           &:hover {
             opacity: 1;
@@ -148,10 +195,16 @@ main {
       color: $colorFont;
       border-collapse: collapse;
       margin-inline: auto;
+      @include mobile {
+        display: none;
+      }
       th,
       td {
         border: 1px solid $colorFont;
         padding: 1rem 4rem;
+        @include tablet {
+          padding: 1rem 3.4rem;
+        }
       }
       .crvena {
         background-color: $crvena;
@@ -172,6 +225,25 @@ main {
         }
       }
     }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        text-decoration: none;
+        color: $colorFont;
+        border: 1px solid $colorFont;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1rem 1.6rem;
+        display: inline-block;
+        transition: background-color 0.4s;
+        opacity: 0;
+        @include mobile {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   // **************************
@@ -184,15 +256,23 @@ main {
       display: flex;
       gap: 3rem;
       align-items: center;
-
+      @include tablet {
+        flex-direction: column;
+      }
       iframe {
         width: 25rem;
         height: 25rem;
+        @include mobile {
+          width: 35rem;
+        }
       }
       form {
         padding: 2rem;
         background-color: $crvena;
         width: 80%;
+        @include mobile {
+          width: 100%;
+        }
         .box {
           display: flex;
           align-items: center;

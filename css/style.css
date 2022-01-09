@@ -37,6 +37,13 @@ header nav ul {
   justify-content: flex-end;
   list-style: none;
 }
+@media (max-width: 570px) {
+  header nav ul {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+}
 header nav ul li {
   text-align: center;
 }
@@ -51,8 +58,16 @@ header nav ul li a:hover {
 }
 header nav ul li:last-child {
   background-color: #f38181;
-  width: 8rem;
   text-align: center;
+}
+@media (max-width: 570px) {
+  header nav ul li:last-child {
+    grid-row: 1;
+    text-align: left;
+  }
+}
+header nav ul li:last-child img {
+  height: 3rem;
 }
 
 main .section-hero {
@@ -62,6 +77,12 @@ main .section-hero {
   background-size: cover;
   height: 50rem;
   position: relative;
+}
+@media (max-width: 570px) {
+  main .section-hero {
+    background-image: none;
+    height: 11.8rem;
+  }
 }
 main .section-hero .hero-text {
   color: white;
@@ -85,6 +106,11 @@ main .section-button .flex {
   align-items: center;
   justify-content: flex-end;
 }
+@media (max-width: 570px) {
+  main .section-button .flex {
+    justify-content: center;
+  }
+}
 main .section-button .flex .flex-item {
   display: flex;
   gap: 3rem;
@@ -98,6 +124,11 @@ main .section-button .flex .flex-item a {
   padding: 1rem 1.6rem;
   display: inline-block;
   transition: background-color 0.4s;
+}
+@media (max-width: 570px) {
+  main .section-button .flex .flex-item a {
+    white-space: nowrap;
+  }
 }
 main .section-button .flex .flex-item a:hover {
   background-color: #cfd1d3;
@@ -114,13 +145,30 @@ main .section-opacity .grid {
   grid-template-columns: 1fr;
   align-items: center;
 }
+@media (max-width: 570px) {
+  main .section-opacity .grid {
+    gap: 5rem;
+    justify-content: center;
+  }
+}
 main .section-opacity .grid .flex-item {
   display: flex;
   gap: 5rem;
   align-items: center;
 }
+@media (max-width: 570px) {
+  main .section-opacity .grid .flex-item {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 main .section-opacity .grid .flex-item:nth-child(2) {
   flex-direction: row-reverse;
+}
+@media (max-width: 570px) {
+  main .section-opacity .grid .flex-item:nth-child(2) {
+    flex-direction: column;
+  }
 }
 main .section-opacity .grid .flex-item img {
   width: 18rem;
@@ -128,9 +176,30 @@ main .section-opacity .grid .flex-item img {
 }
 main .section-opacity .grid .flex-item .item-text {
   opacity: 0;
+  text-align: center;
+}
+main .section-opacity .grid .flex-item .item-text h3 {
+  color: #374249;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  main .section-opacity .grid .flex-item .item-text h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 570px) {
+  main .section-opacity .grid .flex-item .item-text {
+    opacity: 1;
+  }
 }
 main .section-opacity .grid .flex-item .item-text p {
   color: red;
+}
+@media (max-width: 1000px) {
+  main .section-opacity .grid .flex-item .item-text p {
+    font-size: 1.3rem;
+  }
 }
 main .section-opacity .grid .flex-item .item-text:hover {
   opacity: 1;
@@ -149,10 +218,21 @@ main .section-table table {
   border-collapse: collapse;
   margin-inline: auto;
 }
+@media (max-width: 570px) {
+  main .section-table table {
+    display: none;
+  }
+}
 main .section-table table th,
 main .section-table table td {
   border: 1px solid #797979;
   padding: 1rem 4rem;
+}
+@media (max-width: 1000px) {
+  main .section-table table th,
+main .section-table table td {
+    padding: 1rem 3.4rem;
+  }
 }
 main .section-table table .crvena {
   background-color: #f38181;
@@ -168,6 +248,27 @@ main .section-table table thead tr th:first-child {
 main .section-table table thead tr th:nth-child(2) {
   border: none;
 }
+main .section-table .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .section-table .button .btn {
+  text-decoration: none;
+  color: #797979;
+  border: 1px solid #797979;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem 1.6rem;
+  display: inline-block;
+  transition: background-color 0.4s;
+  opacity: 0;
+}
+@media (max-width: 570px) {
+  main .section-table .button .btn {
+    opacity: 1;
+  }
+}
 main .section-contact {
   padding: 3rem;
   background-color: #f3f7f9;
@@ -177,14 +278,29 @@ main .section-contact .flex {
   gap: 3rem;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  main .section-contact .flex {
+    flex-direction: column;
+  }
+}
 main .section-contact .flex iframe {
   width: 25rem;
   height: 25rem;
+}
+@media (max-width: 570px) {
+  main .section-contact .flex iframe {
+    width: 35rem;
+  }
 }
 main .section-contact .flex form {
   padding: 2rem;
   background-color: #f38181;
   width: 80%;
+}
+@media (max-width: 570px) {
+  main .section-contact .flex form {
+    width: 100%;
+  }
 }
 main .section-contact .flex form .box {
   display: flex;
